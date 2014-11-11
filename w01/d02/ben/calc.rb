@@ -75,7 +75,7 @@ def advanced_calc
         puts result
     end
 end
-
+ 
 def trig_calc
     puts Rainbow("(s)in, (c)os: ").green.inverse
     arithmetic_type = gets.chomp.downcase
