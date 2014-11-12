@@ -5,7 +5,7 @@ subways = {
         stops: ["Times Square", "34th", "28th", "23rd", "Union Square", "8th"],
     },
     "six_line" => {
-        stops: ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Aston"],    
+        stops: ["Grand Central", "33rd", "28th", "23rd", "Union Square", "Aston"],
     },
     "l_line" => {
         stops: ["1st", "3rd", "Union Square", "6th", "8th"],
