@@ -1,3 +1,5 @@
+require 'pry'
+
 people_csv = [
   "Jack,Watson-Hamblin,info@fluffyjack.com,123 Fake Street,Fake Town",
   "Ben,Cochrane,info@ben.com,456 Real Street,Real Town",
@@ -22,4 +24,18 @@ people_hashes = [
   }
 ]
 
-people_hashes.each {}
+binding.pry
+
+result = people_csv.map do |csv_string|
+  string_parts = csv_string.split(",")
+
+  {
+    first_name: string_parts[0],
+    last_name: string_parts[1],
+    email: string_parts[2],
+    street_address: string_parts[3],
+    suburb: string_parts[4]
+  }
+end
+
+p result
