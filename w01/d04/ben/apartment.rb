@@ -21,4 +21,8 @@ class Apartment
         "  Number of bedrooms: #{number_of_bedrooms}\n" +
         "  Number of bathrooms: #{number_of_bathrooms}\n"
     end
+
+    def is_occupied?
+        self.is_occupied == true
+    end
 end

@@ -1,10 +1,12 @@
+require 'pry'
+
 require_relative "building"
 require_relative "apartment"
 
 building_one_apartments = [
-  Apartment.new(250.0, true, 400, 1, 1),
   Apartment.new(250.0, false, 400, 1, 1),
-  Apartment.new(450.0, false, 850, 2, 1)
+  Apartment.new(250.0, true, 400, 1, 1),
+  Apartment.new(450.0, true, 850, 2, 1)
 ]
 
 building_two_apartments = [
@@ -47,21 +49,60 @@ buildings = [
 
 def list_buildings(buildings)
   buildings.each do |building|
-    puts "#{buildings.index(building)}: #{building}"
+
+    is_occupied_val = building.apartments.map do |apartment|
+      apartment.is_occupied
+    end
+
+    is_there_an_available_apartment = is_occupied_val.include?(false)
+
+
+    if is_there_an_available_apartment
+      puts "#{buildings.index(building)}: #{building}"
+    end
+
+
+    # if building.apartments.map { |a| a.is_occupied }.include?(false)
+    #   puts "#{buildings.index(building)}: #{building}"
+    # end
+  end
+
+
+
+end
+
+
+def list_apartments(buildings)
+  puts "Choose a building:"
+  building_number = gets.strip.to_i
+
+  building = buildings[building_number]
+
+  building.apartments.each do |apartment|
+    puts "#{building.apartments.index(apartment)}: #{apartment}"
   end
 end
 
-def list_apartments(buildings)
-  buildings.each do |building|
-    building.apartments.each do |apartment|
-      puts apartment
+# list available apartments in a building
+
+def list_available_apartments(buildings)
+  puts "Choose a building:"
+  building_number = gets.strip.to_i
+
+  building = buildings[building_number]
+
+  building.apartments.each do |apartment|
+    binding.pry
+    if apartment.is_occupied?(false)
+      puts "#{building.apartments.index(apartment)}: #{apartment}"
     end
   end
 end
 
+
 # puts buildings
 
-puts "(q)quit, (lb)list buildings, (la)list all apartments"
+puts "(q)quit, (lb)list buildings, (la)list all apartments, (laa)list all available apartments"
 
 response = gets.strip
 
@@ -71,6 +112,8 @@ while response != 'q'
     list_buildings(buildings)
   when 'la'
     list_apartments(buildings)
+  when 'laa'
+    list_available_apartments(buildings)
   else
     puts "That menu item doesn't exist"
   end
