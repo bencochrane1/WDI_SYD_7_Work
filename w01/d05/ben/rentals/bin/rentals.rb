@@ -1,7 +1,7 @@
 
 #!/usr/bin/rentals env ruby
 
-require_relative "rentals/application"
+require_relative "lib/rentals_app/application"
 
 RentalApp::Application.new.start
 

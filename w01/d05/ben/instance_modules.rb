@@ -15,3 +15,10 @@ class Car
         @current_speed
     end
 end
+
+
+class Hotel
+    def checkin
+        @checkin_date = checkin
+    end
+end
