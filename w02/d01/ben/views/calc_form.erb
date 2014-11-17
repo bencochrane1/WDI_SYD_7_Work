@@ -1,0 +1,28 @@
+<form action="/" method="GETS">
+<p>
+  <label for="first_number">First Number</label>
+  <input type="text" name="first_number">
+</p>
+
+<p>
+  <select name="operator">
+  <option value="add" name="add">plus</option>
+  <option value="subtract" name="subtract">subtract</option>
+  <option value="multiply" name="multiply">times</option>
+  <option value="divide" name="divide">divided by</option>
+  </select>
+</p>
+
+<p>
+<label for="second_number">Second Number</label>
+<input type="text" name="second_number" id="second_number">
+</p>
+
+<p><input type="submit"></p>
+<p for="answer">Equals <%= @answer %></p>
+<a href='/'>Reload</a>
+</form>
+
+
+
+

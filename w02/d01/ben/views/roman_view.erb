@@ -1,0 +1,9 @@
+
+<p style="font-size: <%= @real_number %>px"><%= @roman_numeral %></p>
+
+
+<% if @real_number > 3000 %>
+    <p>This number is too big</p>
+<% else %>
+    <%= @roman_numeral %>
+<% end %>

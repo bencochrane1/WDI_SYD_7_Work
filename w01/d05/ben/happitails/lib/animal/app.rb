@@ -48,7 +48,9 @@ module AnimalApp
       gets.chomp.downcase
     end
 
-    case menu
+    response = menu
+
+    case response
     when 'l'
       print 'Choose: (A)nimal List or (C)lient List.'
       reply = gets.chomp.downcase
@@ -120,6 +122,6 @@ module AnimalApp
       puts 'Quit application.'.color(:red)
     end
     response = menu
-    end
+  end
 
 end
