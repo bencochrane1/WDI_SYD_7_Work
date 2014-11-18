@@ -495,3 +495,12 @@ img.img-rounded-large {
     width: 100%;
     margin-left: 0 !important;
 }
+
+.backgreen {
+    background-color: #18BC9C;
+    width: 150px !important;
+}
+
+.backgreenfront {
+    background-color: #18BC9C;
+}
