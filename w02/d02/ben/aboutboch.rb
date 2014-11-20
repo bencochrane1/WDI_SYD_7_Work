@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
-
-
+require 'pony'
 
 
 get '/' do
@@ -71,9 +70,6 @@ get '/' do
     end
 
     @student_names = get_key(@student_data)
-    # @student_name = @student_data[:name]
-    # @student_skills = @student_data[@student_name][:skills]
-    # @student_tagline = @student_data[@student_name][:tagline]
 
     erb :main, layout: :layout
 end
@@ -87,6 +83,37 @@ end
 get '/contact' do
     erb :contact, layout: :layout
 end
+
+post '/contact' do
+
+        name = params[:name]
+        mail = params[:mail]
+        body = params[:body]
+
+
+        Pony.mail({
+          :to => 'bencochrane1@me.com',
+          :from => "bochrane@gmail.com",
+          :subject => "You're enquiry from WDI7",
+          :body => body,
+          :via => :smtp,
+          :via_options => {
+            :address              => 'smtp.mandrillapp.com',
+            :port                 => '587',
+            # :enable_starttls_auto => true,
+            :user_name            => 'bochrane@gmail.com',
+            :password             => 'zkoC7DIrVEGYbEWRVZDY4g',
+            :authentication       => :plain, # :plain, :login, :cram_md5, no auth by default
+            :domain               => "localhost.localdomain" # the HELO domain provided by the client to the server
+          }
+        })
+
+        redirect '/contact'
+
+
+        erb :contact, layout: :layout
+end
+
 
 get '/students/:name' do
 
@@ -161,8 +188,3 @@ get '/students/:name' do
     @student_tagline = @student_data[@student_name][:tagline]
     erb :student, layout: :layout
 end
-
-
-# <% @todo_array.each do |t| %>
-#  <%= puts t %>
-# <% end %>

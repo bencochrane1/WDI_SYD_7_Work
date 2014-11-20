@@ -1,0 +1,43 @@
+<form action="/buy-product" method="POST">
+    <!-- <input type="hidden" name="_method" value="PUT"> -->
+    <input type="hidden" name="price" value="12.95">
+    <input type="hidden" name="qty" value="4">
+    <input type="submit" value="Buy now" >
+    <label for="email">Email</label>
+    <input name="email" id="email" type="text" name="product_name" placeholder="email">
+    <input type="range" min="0" max="100" step="1">
+    <input type="month">
+    <input type="radio">
+    <input type="color"><br/>
+    <label for="">Car Features</label><br/>
+    <input type="checkbox" value="Heated Seats" id="heated_seats" name="car_features[]">
+    <input type="checkbox" name="car_features[]">
+    <input type="checkbox" name="car_features[]">
+    <input type="checkbox" name="car_features[]">
+
+<label>Shirt Size</label><br/>
+
+<label for="small">S</label>
+<input type="radio" id="small" name="shirt_size" value="S"><br/>
+
+<label for="medium">M</label>
+<input type="radio" id="medium" name="shirt_size" value="M"><br/>
+
+<label for="large">L</label>
+<input type="radio" id="medium" name="shirt_size" value="L"><br/>
+
+<label for="extra_large">XL</label>
+<input type="radio" id="extra_large" name="shirt_size" value="XL"><br/>
+
+<input for="countries">
+<select name="country[]" id="countries">
+    <optgroup label="Oceania">
+        <option value="AU">Australia</option>
+    </optgroup>
+    <option value="NZ">New Zealand</option>
+    
+</select>
+
+
+
+</form>

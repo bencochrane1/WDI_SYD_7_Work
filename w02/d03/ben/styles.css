@@ -1,0 +1,53 @@
+#container {
+    width: 960px;
+    padding: 0 20px;
+    margin: 50px auto;
+}
+
+.clearfix {
+    clear: both;
+}
+
+header, nav, main, #sidebar, #footer-left, #footer-right {
+    padding: 20px;
+}
+
+header {
+    background: #FF0000;
+}
+
+nav {
+    background: #00FF00;
+}
+
+footer {
+    background: #0FFF00;
+}
+
+main {
+    background: #00F0FF;
+    width: 660px;
+    float: left;
+    box-sizing: border-box;
+}
+
+#sidebar {
+    background: #00FFFF;
+    width: 300px;
+    float: left;
+    box-sizing: border-box;
+}
+
+#footer-left {
+    background: #0F0FFF;
+    width: 480px;
+    box-sizing: border-box;
+    float: left;
+}
+
+#footer-right {
+    background: #FFF0FF;
+    width: 480px;
+    float: left;
+    box-sizing: border-box;
+}
