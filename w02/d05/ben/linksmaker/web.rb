@@ -12,7 +12,7 @@ DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/todolist.db")
       property :url, Text, :required => true
       property :created, DateTime
   end
-DataMapper.finalize.auto_migrate!
+DataMapper.finalize.auto_upgrade!
 
 
 get '/' do
