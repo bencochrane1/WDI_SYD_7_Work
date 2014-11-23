@@ -1,0 +1,22 @@
+<ul id="todolist" class="unstyled">
+    <% @items.each do |item| %>
+    <li >
+    
+    <span class="item">
+        <a href="http://<%= item[:url] %>" target="_blank"><%= item[:title] %></a>
+    </span>
+    
+    <span class="pull-right">
+        
+        <a href="/delete/<%= item[:id] %>" class="btn btn-danger">Delete</a>
+
+    </span>
+
+    </li>
+
+    <% end %>
+
+</ul>
+
+<a href="/new" class="btn btn-primary">Add a new URL and Title</a>
+
