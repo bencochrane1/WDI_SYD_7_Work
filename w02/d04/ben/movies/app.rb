@@ -4,13 +4,26 @@ require 'httparty'
 require 'pry'
 
 
+
 get '/' do
     if params[:movie_title]
+        # binding.pry
         search_term = params[:movie_title].gsub(' ', '+')
         response = HTTParty.get("http://www.omdbapi.com/?s=#{search_term}")
-        @movies = JSON(response)["Search"]
+
+        if params["feelinglucky"]
+            movies = JSON(response)["Search"].sample()
+            search_term = movies["Title"].gsub(' ', '+')
+            @movie = JSON.parse( HTTParty.get("http://www.omdbapi.com/?t=#{search_term}") )
+            erb :home
+        else
+            @movies = JSON(response)["Search"]
+            erb :movies
+        end  
+    else 
+        erb :movies  
     end
-    erb :movies
+    # binding.pry
 end
 
 get '/movies/:movie_title' do

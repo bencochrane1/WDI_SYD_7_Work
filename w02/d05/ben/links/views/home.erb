@@ -1,0 +1,18 @@
+<h1>Links Home Page</h1>
+
+<p>List of Links</p>
+
+<br/>
+
+<p>
+    <ul>
+        <% @links.each do |link| %>
+            <li><%= link %></li>
+        <% end %>
+    </ul>
+</p>
+
+<br/>
+<br/>
+
+<a href="/tasks/new"><p>Add New Link</p></a>

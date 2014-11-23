@@ -24,7 +24,10 @@ rest.cost(
     {
         rice: 1,
         noodles: 1
-
-    }
+    },
+    {
+        rice: 1,
+        noodles: 1
+   }
 )
 
