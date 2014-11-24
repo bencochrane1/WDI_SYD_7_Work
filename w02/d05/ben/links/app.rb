@@ -58,7 +58,7 @@ get '/tasks/new' do
 end
  
 post '/tasks' do
-  link_hash = [:title => params[:title], :url => params[:url]]
+  link_hash = {:title => params[:title], :url => params[:url]}
   save(link_hash)
   # save the task data
   redirect '/' # do not change this

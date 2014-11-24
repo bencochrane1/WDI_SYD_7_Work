@@ -28,8 +28,6 @@ end
 
 post '/new' do
     Item.create(:title => params[:title], :url => params[:url])
-    url = params[:url]
-    title = params[:title]
     redirect '/'
 end
 
@@ -39,7 +37,7 @@ get '/delete/:id' do
     erb :delete
 end
 
-post '/delete/:id' do
+delete '/delete/:id' do
     if params.has_key?("ok")
         item = Item.first(:id => params[:id])
         item.destroy

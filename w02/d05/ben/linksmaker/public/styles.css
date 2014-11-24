@@ -1,0 +1,15 @@
+ul {
+    list-style-type: none;
+}
+
+.btn-danger {
+    margin-bottom: 30px;
+}
+
+li span a {
+    margin-top: -10px;
+}
+
+ul a.btnprimary {
+    margin-left: 40px;
+}
