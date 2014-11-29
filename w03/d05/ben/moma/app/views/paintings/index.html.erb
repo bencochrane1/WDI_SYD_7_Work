@@ -1,0 +1,10 @@
+<h2>Paintings</h2>
+
+<% @paintings.each do |painting| %>
+<li>
+    <%= link_to painting.title, painting_path(painting) %>
+</li>
+<% end %>
+
+<br>
+<%= link_to 'Back', root_path %>

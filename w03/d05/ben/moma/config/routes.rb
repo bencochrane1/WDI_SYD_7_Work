@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
-  resources :artists, only: [:new, :create, :show, :edit, :update]
+  root 'welcome#index'
+  resources :artists, only: [:index, :new, :create, :show, :edit, :update]
+  resources :paintings, only: [:index, :new, :create, :show, :edit, :update]
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

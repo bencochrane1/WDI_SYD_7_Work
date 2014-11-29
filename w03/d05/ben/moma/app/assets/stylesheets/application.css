@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+.navbar-brand {
+    font-family: 'Kaushan Script', cursive;
+    color: white !important;
+}
+
+
+.intro-header {
+    background: url('http://2.bp.blogspot.com/-fw0qTHHftJo/TvceKUxPIYI/AAAAAAAAoIY/htBfVhIwPG0/s1600/LI-MOMA-HM-010b.jpg') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar.navbar-default.navbar-fixed-top {
+    background-color: rgba(0,0,0,0.4);
+    border: none;
+}
+
+.navbar-right {
+    color: white !important;
+}
+ 

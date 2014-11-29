@@ -1,0 +1,12 @@
+<h1>Moma Artists</h1>
+
+<h2>Artists</h2>
+
+<% @artists.each do |artist| %>
+<li>
+    <%= link_to artist.first_name, artist_path(artist) %>
+</li>
+<% end %>
+
+<br>
+<%= link_to 'Back', root_path %>

@@ -1,0 +1,9 @@
+<h1>Artist:</h1>
+<%= @artist.first_name + " " + @artist.last_name %>
+<br><br>
+<h1>Related Paintings</h1>
+
+
+<% @painting.each do |painting| %>
+<li><%= painting.title %></li>
+<% end %>
