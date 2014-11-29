@@ -1,9 +1,54 @@
-<h1>Artist:</h1>
-<%= @artist.first_name + " " + @artist.last_name %>
-<br><br>
-<h1>Related Paintings</h1>
+<!-- Header -->
+<div class="intro-header pages">
 
+    <div class="container">
 
-<% @painting.each do |painting| %>
-<li><%= painting.title %></li>
-<% end %>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message pages">
+                    <h1 class="curly">Artists of the Moma</h1>
+                    <h3>Learn about the Artists</h3>
+                    <hr class="intro-divider">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.intro-header -->
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Artist Details</h3>
+                </div>
+                <div class="panel-body">
+                <h2>Name:</h2><%= @artist.first_name + " " + @artist.last_name %><br><br>
+                <h2>Nationality:</h2><%= @artist.nationality %><br><br>
+                <h2>Period:</h2><%= @artist.period %><br><br>
+                <h2>Date of Birth:</h2><%= @artist.date_of_birth %><br><br>
+                <%= link_to 'Edit Artist', edit_artist_path, class: 'btn btn-default btn-lg edit' %>
+                <%= link_to 'Back to Homepage', root_path, class: 'btn btn-default btn-lg back'  %>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><%= @artist.first_name + " " + @artist.last_name %>'s Paintings</h3>
+                </div>
+                <div class="panel-body">
+                    <% @painting.each do |painting| %>
+                    <li><%= link_to painting.title, painting_path(painting), class: 'btn btn-default btn-lg paint' %></li>
+                    <% end %>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>

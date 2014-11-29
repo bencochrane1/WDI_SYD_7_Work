@@ -22,6 +22,16 @@ class PaintingsController < ApplicationController
         end
     end
 
+    def edit
+    @painting = Painting.find(params[:id])
+    end
+
+    def update
+    @painting = Painting.find(params[:id])
+    @painting.update(painting_params)
+    redirect_to @painting
+    end
+
     private
 
         def painting_params

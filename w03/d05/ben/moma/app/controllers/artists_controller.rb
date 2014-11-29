@@ -9,9 +9,6 @@ class ArtistsController < ApplicationController
   def show
     @artist = Artist.find(params[:id])
     @painting = Painting.where(artist_id: @artist)
-    # @painting = Painting.find(params[:artist_id])
-    # @paintings = .find(params[:artist_id])
-    # @paintings = @artists.all
   end
 
 

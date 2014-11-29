@@ -1,12 +1,40 @@
-<h1>Moma Artists</h1>
+<!-- Header -->
+<div class="intro-header pages">
 
-<h2>Artists</h2>
+    <div class="container">
 
-<% @artists.each do |artist| %>
-<li>
-    <%= link_to artist.first_name, artist_path(artist) %>
-</li>
-<% end %>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message pages">
+                    <h1 class="curly">Artists of the Moma</h1>
+                    <h3>Learn about the Artists</h3>
+                    <hr class="intro-divider">
+                </div>
+            </div>
+        </div>
 
-<br>
-<%= link_to 'Back', root_path %>
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.intro-header -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+        
+            <div class="intro-message pages">
+            <h2>Artists</h2>
+                <ul class="list-inline intro-social-buttons">
+                <% @artists.each do |artist| %>
+                    <li>
+                        <%= link_to artist.first_name, artist_path(artist), class: 'btn btn-default btn-lg new' %>
+                    </li>
+                <% end %>
+
+                </ul>
+            </div>
+            <%= link_to 'Back to Homepage', root_path, class: 'btn btn-default btn-lg back'  %>
+        </div>
+    </div>
+</div>

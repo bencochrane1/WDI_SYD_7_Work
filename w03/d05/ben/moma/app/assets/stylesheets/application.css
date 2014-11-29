@@ -15,17 +15,23 @@
  */
 
 .navbar-brand {
-    font-family: 'Kaushan Script', cursive;
+    font-family: 'Lobster', cursive;
     color: white !important;
 }
 
 
 .intro-header {
-    background: url('http://2.bp.blogspot.com/-fw0qTHHftJo/TvceKUxPIYI/AAAAAAAAoIY/htBfVhIwPG0/s1600/LI-MOMA-HM-010b.jpg') no-repeat center center;
+    background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.2), 
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('http://2.bp.blogspot.com/-fw0qTHHftJo/TvceKUxPIYI/AAAAAAAAoIY/htBfVhIwPG0/s1600/LI-MOMA-HM-010b.jpg') no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
 }
 
 .navbar.navbar-default.navbar-fixed-top {
@@ -33,7 +39,110 @@
     border: none;
 }
 
-.navbar-right {
+.navbar-default .navbar-nav>li>a {
     color: white !important;
 }
- 
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: lightgrey !important;
+}
+
+.btn.btn-default.btn-lg {
+    width: 180px;
+    border: none;
+    border-bottom: 3px solid grey 
+}
+
+.btn.btn-default.btn-lg.new {
+    background-color: #FF4941;
+    border: none;
+    border-bottom: 3px solid #B71F1F;
+    color: white;
+    margin-bottom: 4%;
+}
+
+
+.btn.btn-default.btn-lg.new:hover {
+    background-color: #FF2820;
+}
+
+
+.curly {
+    font-family: 'Lobster', cursive;
+}
+
+.list-inline.bottom li a {
+    color: white;
+}
+
+.list-inline.bottom li a:hover {
+    color: lightgrey;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #444444;
+}
+
+/*.intro-header.pages {
+    height: 240px !important;
+}*/
+
+.intro-message.pages {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.intro-message.pages.details {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: left;
+    list-style-type: none;
+}
+
+.intro-message.pages.details ul li h2 {
+    list-style-type: none !important;
+}
+
+.btn.btn-default.btn-lg.back {
+    background-color: #CDE730;
+    border: none;
+    border-bottom: 3px solid #90A800;
+    color: #444444;
+    margin-bottom: 4%;
+}
+
+.btn.btn-default.btn-lg.back:hover {
+    background-color: #9DB919;
+}
+
+.btn.btn-default.btn-lg.edit {
+    background-color: #75F763;
+    border: none;
+    border-bottom: 3px solid #296F31;
+    color: #444444;
+    margin-bottom: 4%;
+}
+
+.btn.btn-default.btn-lg.edit:hover {
+    background-color: #0ED41D;
+}
+
+.panel-body li {
+    list-style-type: none;
+}
+
+.btn.btn-default.btn-lg.paint {
+    background-color: #2B303B;
+    border: none;
+    color: white;
+    margin-bottom: 4%;
+    width: 100%
+}
+
+
+.btn.btn-default.btn-lg.paint:hover {
+    background-color: #232830;
+}
+

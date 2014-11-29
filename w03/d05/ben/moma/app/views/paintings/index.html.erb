@@ -1,10 +1,43 @@
-<h2>Paintings</h2>
+<!-- Header -->
+<div class="intro-header pages">
 
-<% @paintings.each do |painting| %>
-<li>
-    <%= link_to painting.title, painting_path(painting) %>
-</li>
-<% end %>
+    <div class="container">
 
-<br>
-<%= link_to 'Back', root_path %>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message pages">
+                    <h1 class="curly">Paintings of the Moma</h1>
+                    <h3>Learn about the Paintings</h3>
+                    <hr class="intro-divider">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.intro-header -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+        
+            <div class="intro-message pages">
+            <h2>Paintings</h2>
+                <ul class="list-inline intro-social-buttons">
+                <% @paintings.each do |painting| %>
+                    <li>
+                        <%= link_to painting.title, painting_path(painting), class: 'btn btn-default btn-lg new' %>
+                    </li>
+                <% end %>
+
+                </ul>
+            </div>
+            <%= link_to 'Back to Homepage', root_path, class: 'btn btn-default btn-lg back'  %>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,1 +1,42 @@
-<%= @painting.title + " from " + @painting.year %>
+<!-- Header -->
+<div class="intro-header pages">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message pages">
+                    <h1 class="curly">Paintings of the Moma</h1>
+                    <h3>Learn about the Paintings</h3>
+                    <hr class="intro-divider">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+</div>
+<!-- /.intro-header -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Painting Details</h3>
+                </div>
+                <div class="panel-body">
+                <h2>Title:</h2><%= @painting.title %><br><br>
+                <h2>Year:</h2><%= @painting.year %><br><br>
+                <h2>Medium:</h2><%= @painting.medium %><br><br>
+                <h2>Style:</h2><%= @painting.style %><br><br>
+                <%= link_to 'Edit Painting Details', edit_painting_path, class: 'btn btn-default btn-lg edit' %>
+                <%= link_to 'Back to Homepage', root_path, class: 'btn btn-default btn-lg back'  %>
+                </div>
+            </div>
+
+        </div>      
+    </div>
+</div>
