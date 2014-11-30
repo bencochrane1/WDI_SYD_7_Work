@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
   root 'welcome#index'
-  resources :artists, only: [:index, :new, :create, :show, :edit, :update]
-  resources :paintings, only: [:index, :new, :create, :show, :edit, :update]
+  resources :artists, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  resources :paintings, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   
 
   # The priority is based upon order of creation: first created -> highest priority.

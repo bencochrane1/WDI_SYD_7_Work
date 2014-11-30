@@ -34,6 +34,8 @@
                 <h2>Style:</h2><%= @painting.style %><br><br>
                 <%= link_to 'Edit Painting Details', edit_painting_path, class: 'btn btn-default btn-lg edit' %>
                 <%= link_to 'Back to Homepage', root_path, class: 'btn btn-default btn-lg back'  %>
+                <%= link_to 'Delete Painting', painting_path(@painting), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-lg back' %>
+
                 </div>
             </div>
 

@@ -34,6 +34,7 @@
                 <h2>Date of Birth:</h2><%= @artist.date_of_birth %><br><br>
                 <%= link_to 'Edit Artist', edit_artist_path, class: 'btn btn-default btn-lg edit' %>
                 <%= link_to 'Back to Homepage', root_path, class: 'btn btn-default btn-lg back'  %>
+                <%= link_to 'Delete Artist', artist_path(@artist), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-default btn-lg back' %>
                 </div>
             </div>
 
