@@ -11,33 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141130231901) do
+ActiveRecord::Schema.define(version: 20141201035608) do
 
-  create_table "artist_paintings", force: true do |t|
-    t.integer  "artist_id"
-    t.integer  "painting_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "artists", force: true do |t|
-    t.string   "first_name"
-    t.string   "nationality"
-    t.string   "period"
-    t.text     "image"
-    t.date     "date_of_birth"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "last_name"
-  end
-
-  create_table "paintings", force: true do |t|
+  create_table "books", force: true do |t|
     t.string   "title"
-    t.string   "year"
-    t.string   "medium"
-    t.string   "style"
-    t.text     "image"
-    t.integer  "artist_id"
+    t.string   "cuisine"
+    t.string   "chef"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ingredients", force: true do |t|
+    t.string   "name"
+    t.string   "measurement"
+    t.string   "cost"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "recipe_ingredients", force: true do |t|
+    t.integer  "recipe_id"
+    t.integer  "ingredient_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "recipes", force: true do |t|
+    t.string   "name"
+    t.string   "course"
+    t.string   "serving_size"
+    t.text     "instructions"
+    t.string   "image"
+    t.integer  "book_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
