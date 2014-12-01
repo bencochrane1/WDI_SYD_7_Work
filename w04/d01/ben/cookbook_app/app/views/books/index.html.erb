@@ -1,0 +1,6 @@
+<h1>All of the books</h1>
+
+<% @books.each do |book| %>
+    <h3><%= link_to book.title, book  %></h3>
+    <p><%= link_to book.chef, book %></p>
+<% end %>
